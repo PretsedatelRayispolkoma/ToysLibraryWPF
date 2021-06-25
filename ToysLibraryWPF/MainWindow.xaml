@@ -5,14 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ToysLibraryWPF"
         mc:Ignorable="d"
+        xmlns:col="clr-namespace:System.Collections;assembly=mscorlib"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <DataGrid x:Name="ToysLibrary" HorizontalAlignment="Left" Height="419" Margin="450,0,0,0" VerticalAlignment="Top" Width="342"/>
-        <TextBox x:Name="Title" HorizontalAlignment="Left" Height="23" Margin="43,25,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="Author" HorizontalAlignment="Left" Height="23" Margin="168,25,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="Illustrations" HorizontalAlignment="Left" Height="23" Margin="293,25,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="Publisher" HorizontalAlignment="Left" Height="23" Margin="106,59,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="Year" HorizontalAlignment="Left" Height="23" Margin="231,59,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-
+        <DataGrid x:Name="ToysList" AutoGenerateColumns="True" HorizontalAlignment="Left" Height="419" Margin="450,0,0,0" VerticalAlignment="Top" Width="342" SelectionChanged="ToysLibrary_SelectionChanged">
+            <DataGrid.Resources>
+                <col:ArrayList x:Key="toys">
+                    <local:Book Title ="Asd" Publisher ="sad" Number ="123"/>
+                </col:ArrayList>
+            </DataGrid.Resources>
+        </DataGrid>
+        <TextBox x:Name="TB_title" HorizontalAlignment="Left" Height="23" Margin="43,25,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="TB_author" HorizontalAlignment="Left" Height="23" Margin="168,25,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="TB_ill" HorizontalAlignment="Left" Height="23" Margin="293,25,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="TB_publisher" HorizontalAlignment="Left" Height="23" Margin="106,59,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="TB_year" HorizontalAlignment="Left" Height="23" Margin="231,59,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
     </Grid>
 </Window>

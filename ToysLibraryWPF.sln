@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 16.0.29911.84
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToysLibraryWPF", "ToysLibraryWPF\ToysLibraryWPF.csproj", "{AFE3B0CB-E467-43C4-849F-E94204801997}"
+	ProjectSection(ProjectDependencies) = postProject
+		{C9F93D82-66EC-4A06-83E1-6425A414B16C} = {C9F93D82-66EC-4A06-83E1-6425A414B16C}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToysLibrary", "ToysLibrary\ToysLibrary.csproj", "{C9F93D82-66EC-4A06-83E1-6425A414B16C}"
 EndProject
